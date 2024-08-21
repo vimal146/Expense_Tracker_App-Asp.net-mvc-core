@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/FinanceTracker.styles.css" asp-append-version="true" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+	<div class="row justify-content-center">
+		<div class="col-5 mt-5">
+			<div class="card login-logout-card">
+				<div class="card-header">
+					<ul class="nav nav-tabs card-header-tabs">
+						<li class="nav-item">
+							<a class="nav-link" href="/Identity/Account/Login">
+								Log In
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/Identity/Account/Register">
+								Register
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="card-body">
+					<div class="row justify-content-center">
+						<div class="col-10 my-4">
+							@RenderBody()
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
